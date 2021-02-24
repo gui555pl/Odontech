@@ -1,6 +1,6 @@
 Feature: Customization for each medical clinic
     As a admin of the medical clinic platform
-    I want to be able to change the UI/UX 
+    I want to be able to change the UI/UX of the platform
     So that I can adapt the platform to our medical clinic
 
     Scenario: change logo
