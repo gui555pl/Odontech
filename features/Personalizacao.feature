@@ -21,3 +21,4 @@ Feature: Customization for each medical clinic
         When I edit the name from "My Clinic" to "Medical Clinic Name"
         Then the new name is properly updated by the system
         And the new name "Medical Clinic Name" is shown in the user interface
+_
