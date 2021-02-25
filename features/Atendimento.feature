@@ -5,7 +5,6 @@ Scenario: Realizando atendimento
     When Eu preencho todos os campos do atendimento daquele paciente
     Then Eu posso clicar em finalizar atendimento
     And Eu posso ver a confirmação da realização do atendimento
-    Then Eu sou redirecionado a tela inicial
 
 Scenario: Falhando ao preencher informações no atendimento
     Given Eu estou na página de atendimentos
