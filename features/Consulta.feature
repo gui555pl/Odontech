@@ -5,8 +5,6 @@ Scenario: nova consulta
 	And eu vou para o histórico de “Carlos”
 	When eu crio uma nova consulta
 	Then eu vou para a tela de informações da consulta
-
-
 Scenario: informações da consulta
 	Given eu estou na página de informações do paciente
 	And eu preencho os campos com as informações da consulta
