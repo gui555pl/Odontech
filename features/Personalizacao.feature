@@ -7,7 +7,7 @@ Feature: Customization for each medical clinic
         Given that the logo is stored in the system with file name "default_logo.jpg"
         When I upload from "default_logo.jpg" to "MyClinical_logo.jpg"
         Then the new logo is properly updated by the system
-        And I am able to see the new image logo
+        And I am able to see the new image logo "MyClinical_logo.jpg"
 
     Scenario: change color palette
         Given that the platform colors are "#fff" and "#f00"
