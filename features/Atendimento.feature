@@ -22,3 +22,8 @@ Scenario: Não preenchendo informações no atendimento
     When Eu não preencho um ou mais campos obrigatórios do atendimento
     Then Eu posso clicar em finalizar atendimento
     And Eu posso ver a mensagem de erro na realização do atendimento
+
+Scenario: Analisando atendimentos
+    Given Eu estou na página de atendimentos
+    When Eu vejo os atendimentos do dia
+    Then Eu analiso os atendimentos sendo exibidos
