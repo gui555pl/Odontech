@@ -11,7 +11,7 @@ Scenario: Falhando ao preencher informações no atendimento
     When Eu seleciono a opção de novo atendimento
     Then Aparece o formulário do atendimento a ser preenchido
     When Eu preencho um ou mais campos do atendimento de forma errada
-    Then Eu posso clicar em finalizar atendimento
+    Then Eu posso clicar em finalizar atendimento.
     And Eu posso ver a mensagem de erro na realização do atendimento.
 
 Scenario: Não preenchendo informações no atendimento
