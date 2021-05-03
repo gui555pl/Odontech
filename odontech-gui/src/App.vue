@@ -1,32 +1,52 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<template lang="pug">
+  v-app.default_background
+    HomeLayout(v-if='!isLogin')
+    template(v-else)
+      .image_login
+      LoginLayout
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import LoginLayout from '../src/layouts/LoginLayout'
+import HomeLayout from '../src/layouts/HomeLayout'
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+export default {
+  components: {
+    LoginLayout,
+    HomeLayout
+  },
+  computed: {
+    isLogin() {
+      return this.$route.path === "/login"
     }
   }
+}
+</script>
+
+<style>
+.default_background {
+  background-color: #eee!important;
+}
+.image_login {
+  background-image: url("../public/img/OdontoTech.jpeg") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+.card_radius_drawer {
+  border-top-right-radius: 8px !important;
+  border-top-left-radius: 8px !important;
 }
 </style>

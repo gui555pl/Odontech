@@ -1,20 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home'
 import Agendamento from '../views/Agendamento'
 import Atendimento from '../views/Atendimento'
 import Prontuario from '../views/Prontuario'
+import Login from '../views/Login'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: '',
-    component: Home
-  },
-  {
-    path: '/agendamento',
+    redirect: '/agendamento',
     name: 'Agendamento',
     component: Agendamento
   },
@@ -27,6 +23,11 @@ const routes = [
     path: '/Prontuario',
     name: 'Prontuário',
     component: Prontuario
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
   }
 ]
 
