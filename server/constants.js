@@ -159,7 +159,7 @@ var examples = {
                     procedimento_realizado: 'Reconstrução da coroa',
                     medicamento_prescrito: 'Tramadol',
                     data: "09-03-2020, 10:59",
-                    tipo: "cirurgia",
+                    tipo: "consulta",
                     prontID: "2"
                 }
             ]

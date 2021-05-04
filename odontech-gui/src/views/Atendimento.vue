@@ -15,6 +15,8 @@
             v-text-field(v-model='search.inicial' label='Data Inicial' hide-details outlined rounded dense)
           v-col(cols='auto' align-self='center')
             v-text-field(v-model='search.final' label='Data Final' hide-details outlined rounded dense)
+          v-col(cols='auto' align-self='center')
+            v-text-field(v-model='search.tipo' label='Tipo do Atendimento' hide-details outlined rounded dense)
           v-col(cols='1' align-self='center')
             v-btn(icon @click='filterAtendimento')
               v-icon mdi-filter-variant
@@ -51,6 +53,10 @@ export default {
         if(this.search.inicial && this.search.final) {
           await this.$store.dispatch('atendimento/filterByDateRange', {from: this.search.inicial, to: this.search.final})
         }
+        if(this.search.tipo) {
+          await this.$store.dispatch('atendimento/filterByType', this.search.tipo)
+        }
+        // if(this.search.tipo)
         // this.atendimentos = this.$store.getters['prontuario/getProntuarios']
       } catch (err) {
         Swal.fire({
@@ -79,7 +85,8 @@ export default {
         patient_name: undefined,
         doctor_name: undefined,
         inicial: undefined,
-        final: undefined
+        final: undefined,
+        tipo: undefined
       }
     }
   }

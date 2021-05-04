@@ -30,6 +30,11 @@ export const atendimento = {
       let result = []
       result = await axios.get('http://localhost:3000/filterAtendimentoByRange', {params: range})
       commit('setList', result.data)
+    },
+    async filterByType({ commit }, type) {
+      let result = []
+      result = await axios.get('http://localhost:3000/filterAtendimentoByType', {params: {type}})
+      commit('setList', result.data)
     }
   },
   mutations: {

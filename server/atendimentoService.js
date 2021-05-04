@@ -41,7 +41,6 @@ function filterByDateRange (app) {
         let from = req.query.from
         let to = req.query.to
         let atendimentos = getAtendimentosList(app)
-        console.log(atendimentos)
         let filteredAtendimentos = atendimentos.filter((atendimento) => {
             let time = atendimento.data
             let daates = time.split(",", 2)
@@ -49,7 +48,6 @@ function filterByDateRange (app) {
             let hour = daates[1]
             let fullDate = invertDate(daate)
             let isBetween = moment(fullDate).isBetween(invertDate(from), invertDate(to));
-            console.log(fullDate)
             return isBetween
         })
         if(filteredAtendimentos.length)
@@ -93,6 +91,8 @@ function filterByDoctor (app) {
 
 function filterByType (app) {
     app.get('/filterAtendimentoByType', (req, res) => {
+        console.log(req.query)
+        console.log(req.params)
         let type = req.query.type
         let atendimentos = getAtendimentosList(app)
         let filtered = atendimentos.filter((atendimento) => {
