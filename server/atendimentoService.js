@@ -23,7 +23,6 @@ function getAtendimentosList () {
     let atendimentos = prontuarios.reduce((acc, prontuario) => {
         return acc.concat(prontuario.atendimento)
     },[])
-    console.log(atendimentos)
     
     return atendimentos
 }
