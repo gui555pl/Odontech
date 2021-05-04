@@ -26,6 +26,24 @@ function addProntuario(app) {
     })
 }
 
+function findProntuarioByCPF(app) {
+    app.get('/findProntuarioByCPF', (req, res) => {
+        let CPF = req.query.CPF
+        prontuarioList = examples.PRONTUARIO_LIST
+        var found = prontuarioList.find((el) => {
+            console.log(CPF)
+            if (el.paciente.cpf === CPF)
+                return true
+            return false
+        })
+        if (found) {
+            res.send(found)
+        } else {
+            res.status(404).send('Nenhum prontuário encontrado')
+        }
+    })
+}
+
 function findProntuarioByName(app) {
     app.get('/findProntuarioByName', (req, res) => {
         let name = req.query.name
@@ -47,6 +65,7 @@ function findProntuarioByName(app) {
 function initProntuario (app) {
     addProntuario(app)
     findProntuarioByName(app)
+    findProntuarioByCPF(app)
 }
 
 module.exports = { initProntuario }
