@@ -44,12 +44,12 @@ export default {
         {
           text: 'Agendamento',
           icon: 'mdi-calendar',
-          path: '/agendamento'
+          path: '/agendamentos'
         },
         {
           text: 'Prontuário',
           icon: 'mdi-card-account-details',
-          path: '/prontuario'
+          path: '/prontuarios'
         },
         {
           text: 'Atendimentos',
