@@ -23,15 +23,18 @@ var examples = {
                     procedimento_realizado: 'Correção de esmalte',
                     medicamento_prescrito: 'Dipirona',
                     data: "09, 04, 2020, 10:59",
-                    tipo: "consulta"
+                    tipo: "consulta",
+                    prontID: "1"
                 },
                 {
-                    medico_responsavel: 'Igor Henrique',
+                    medico_responsavel: 'Galindo Vinícius',
                     queixas: 'Dor profunda ao mastigar',
                     procedimento_realizado: 'Remoção dos dentes sisos',
                     medicamento_prescrito: 'Tramadol',
                     data: "15, 04, 2020, 10:59",
-                    tipo: "cirurgia"
+                    tipo: "cirurgia",
+                    prontID: "1"
+
                 }
             ]
         },
@@ -56,7 +59,8 @@ var examples = {
                     procedimento_realizado: 'Reconstrução da coroa',
                     medicamento_prescrito: 'Tramadol',
                     data: "09, 03, 2020, 10:59",
-                    tipo: "cirurgia"
+                    tipo: "cirurgia",
+                    prontID: "2"
                 }
             ]
         },
@@ -68,4 +72,15 @@ function pushProntuario (prontuario) {
     return examples.PRONTUARIO_LIST
 }
 
-module.exports = { examples, pushProntuario }
+function pushAtendimento (atendimento) {
+    let prontID = atendimento.prontID
+    let index = examples.PRONTUARIO_LIST.findIndex((el) => {
+        if (el.id == prontID)
+            return true
+        return false
+    })
+    examples.PRONTUARIO_LIST[index].atendimento.push(atendimento)
+    return examples.PRONTUARIO_LIST[index].atendimento
+}
+
+module.exports = { examples, pushProntuario, pushAtendimento }
