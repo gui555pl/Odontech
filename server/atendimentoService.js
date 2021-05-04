@@ -90,12 +90,28 @@ function filterByDoctor (app) {
     })
 }
 
+
+function filterByType (app) {
+    app.get('/filterAtendimentoByType', (req, res) => {
+        let type = req.query.type
+        let atendimentos = getAtendimentosList(app)
+        let filtered = atendimentos.filter((atendimento) => {
+            return atendimento.tipo.includes(type)
+        })
+        if(filtered.length)
+            res.send(filtered)
+        else
+        res.status(404).send('Nenhum atendimento encontrado')
+    })
+}
+
 function initAtendimento (app) {
     addAtendimento(app)
     listAtendimentos(app)
     filterByDateRange(app)
     filterByDoctor(app)
     filterByPatient(app)
+    filterByType(app)
 
 }
 
