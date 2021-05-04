@@ -1,6 +1,6 @@
 const { initProntuario } = require('./prontuarioService');
+const { initAtendimento } = require('./atendimentoService');
 
-// atendimento = require('atendimentoService')
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 
 (function main () {
     initProntuario (app)
+    initAtendimento (app)
 })();
 
 
