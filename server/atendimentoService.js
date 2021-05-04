@@ -1,5 +1,6 @@
 var { examples, pushAtendimento } = require('./constants')
 var { removeAcento, removeWhiteSpaces } = require('./helper')
+const moment = require('moment')
 
 function addAtendimento (app) {
     app.post('/addAtendimento', function (req, res) {
