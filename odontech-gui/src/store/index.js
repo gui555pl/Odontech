@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import { loginInformation } from './loginInformation'
 import { prontuario } from './prontuario'
+import { atendimento } from './atendimento'
 Vue.use(Vuex)
 
 import VuexPersistence from 'vuex-persist'
@@ -15,6 +16,7 @@ export default new Vuex.Store({
   plugins: [vuexPersistent.plugin],
   modules: {
     loginInformation,
-    prontuario
+    prontuario,
+    atendimento
   }
 })

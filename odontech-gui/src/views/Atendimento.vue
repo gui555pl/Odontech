@@ -1,14 +1,73 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    | a
-  </div>
+<template lang="pug">
+  v-row
+    v-col
+      v-sheet.pa-5(min-height='calc(100vh - 100px)' rounded='lg')
+        .text-h5.mb-5 Atendimentos
+        v-row.pb-0
+          v-col.pb-0(cols='auto' align-self='center')
+            .text-subtitle- Procurar por:
+        v-row
+          v-col(cols='5' align-self='center')
+            v-text-field(v-model='search.patient_name' label='Nome do Paciente' hide-details outlined rounded dense)
+          v-col(cols='5' align-self='center')
+            v-text-field(v-model='search.doctor_name' label='Nome do Dentista' hide-details outlined rounded dense)
+          v-col(cols='1' align-self='center')
+            v-btn(icon @click='filterProntuario')
+              v-icon mdi-filter-variant
+        v-row
+          v-virtual-scroll(
+            :items="list"
+            height="710"
+            item-height="100"
+          )
+            template(v-slot:default="{ item }")
+              v-list-item(@click='openProntuario()' :key='item.data')
+                v-list-item-avatar(color='grey lighten-2')
+                  v-icon mdi-account
+                v-list-item-content
+                  v-list-item-title Data: {{ item.data }}
+                  v-list-item-title Dentista Responsável: {{ item.medico_responsavel }}
+                  v-list-item-title Paciente: 
+                  v-list-item-subtitle Tipo: {{ item.tipo }} 
+              v-divider(:key='index')
 </template>
 
 <script>
 // @ is an alias to /src
-
+import Swal from 'sweetalert2'
 export default {
-  name: 'Home'
+  name: 'Atendimento',
+  methods: {
+    async findProntuarios() {
+      try{
+        await this.$store.dispatch('atendimento/list', this.search)
+        this.prontuarios = this.$store.getters['prontuario/getProntuarios']
+      } catch (err) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Nenhum prontuário encontrado'
+        })
+        console.error(err)
+      }
+    }
+  },
+  computed: {
+    list() {
+      return this.$store.getters['atendimento/getAtendimentos']
+    }
+  },
+  async created() {
+    await this.$store.dispatch('atendimento/list', this.search)
+  },
+  data() {
+    return {
+      search: {
+        patient_name: undefined,
+        doctor_name: undefined
+        
+      },
+      atendimentos: []
+    }
+  }
 }
 </script>

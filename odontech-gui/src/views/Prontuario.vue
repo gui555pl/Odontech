@@ -59,70 +59,11 @@ export default {
   },
   data() {
     return {
-      type: 'CPF',
-      search: {cpf: undefined, nome: undefined},
-      prontuarios: [
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        }
-      ]
+      search: {
+        cpf: undefined, 
+        nome: undefined
+      },
+      prontuarios: []
     }
   }
 }
