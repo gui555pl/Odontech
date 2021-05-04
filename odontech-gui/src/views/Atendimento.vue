@@ -48,13 +48,16 @@ export default {
       try{
         if(this.search.patient_name)
           await this.$store.dispatch('atendimento/filterByPatient', this.search.patient_name)
-        if(this.search.doctor_name)
+        else if(this.search.doctor_name)
           await this.$store.dispatch('atendimento/filterByDoctor', this.search.doctor_name)
-        if(this.search.inicial && this.search.final) {
+        else if(this.search.inicial && this.search.final) {
           await this.$store.dispatch('atendimento/filterByDateRange', {from: this.search.inicial, to: this.search.final})
         }
-        if(this.search.tipo) {
+        else if(this.search.tipo) {
           await this.$store.dispatch('atendimento/filterByType', this.search.tipo)
+        }
+        else {
+          await this.$store.dispatch('atendimento/list', this.search)
         }
         // if(this.search.tipo)
         // this.atendimentos = this.$store.getters['prontuario/getProntuarios']
