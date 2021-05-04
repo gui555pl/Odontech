@@ -12,9 +12,9 @@
           v-col(cols='5' align-self='center')
             v-text-field(v-model='search.doctor_name' label='Nome do Dentista' hide-details outlined rounded dense)
           v-col(cols='auto' align-self='center')
-            v-select(v-model='search.mes' :items='meses' label='Mês' hide-details outlined rounded dense)
+            v-text-field(v-model='search.inicial' label='Data Inicial' hide-details outlined rounded dense)
           v-col(cols='auto' align-self='center')
-            v-select(v-model='search.ano' :items='anos' label='Ano' hide-details outlined rounded dense)
+            v-text-field(v-model='search.final' label='Data Final' hide-details outlined rounded dense)
           v-col(cols='1' align-self='center')
             v-btn(icon @click='filterAtendimento')
               v-icon mdi-filter-variant
@@ -48,11 +48,14 @@ export default {
           await this.$store.dispatch('atendimento/filterByPatient', this.search.patient_name)
         if(this.search.doctor_name)
           await this.$store.dispatch('atendimento/filterByDoctor', this.search.doctor_name)
+        if(this.search.inicial && this.search.final) {
+          await this.$store.dispatch('atendimento/filterByDateRange', {from: this.search.inicial, to: this.search.final})
+        }
         // this.atendimentos = this.$store.getters['prontuario/getProntuarios']
       } catch (err) {
         Swal.fire({
           icon: 'error',
-          title: 'Nenhum prontuário encontrado'
+          title: 'Nenhum atendimento encontrado'
         })
         console.error(err)
       }
@@ -75,27 +78,9 @@ export default {
       search: {
         patient_name: undefined,
         doctor_name: undefined,
-        mes: undefined,
-        ano: undefined
-      },
-      atendimentos: [],
-      meses: [
-        {text: 'Janeiro', value: 1},
-        {text: 'Fevereiro', value: 2},
-        {text: 'Março', value: 3},
-        {text: 'Abril', value: 4},
-        {text: 'Maio', value: 5},
-        {text: 'Junho', value: 6},
-        {text: 'Julho', value: 7},
-        {text: 'Agosto', value: 8},
-        {text: 'Setembro', value: 9},
-        {text: 'Outubro', value: 10},
-        {text: 'Novembro', value: 11},
-        {text: 'Dezembro', value: 12}
-      ],
-      anos: [
-        2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008
-      ]
+        inicial: undefined,
+        final: undefined
+      }
     }
   }
 }
