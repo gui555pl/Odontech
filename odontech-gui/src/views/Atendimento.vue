@@ -11,8 +11,12 @@
             v-text-field(v-model='search.patient_name' label='Nome do Paciente' hide-details outlined rounded dense)
           v-col(cols='5' align-self='center')
             v-text-field(v-model='search.doctor_name' label='Nome do Dentista' hide-details outlined rounded dense)
+          v-col(cols='auto' align-self='center')
+            v-select(v-model='search.mes' :items='meses' label='Mês' hide-details outlined rounded dense)
+          v-col(cols='auto' align-self='center')
+            v-select(v-model='search.ano' :items='anos' label='Ano' hide-details outlined rounded dense)
           v-col(cols='1' align-self='center')
-            v-btn(icon @click='filterProntuario')
+            v-btn(icon @click='filterAtendimento')
               v-icon mdi-filter-variant
         v-row
           v-virtual-scroll(
@@ -27,7 +31,7 @@
                 v-list-item-content
                   v-list-item-title Data: {{ item.data }}
                   v-list-item-title Dentista Responsável: {{ item.medico_responsavel }}
-                  v-list-item-title Paciente: 
+                  v-list-item-title Paciente: {{ item.nome_paciente }}
                   v-list-item-subtitle Tipo: {{ item.tipo }} 
               v-divider(:key='index')
 </template>
@@ -38,10 +42,13 @@ import Swal from 'sweetalert2'
 export default {
   name: 'Atendimento',
   methods: {
-    async findProntuarios() {
+    async filterAtendimento() {
       try{
-        await this.$store.dispatch('atendimento/list', this.search)
-        this.prontuarios = this.$store.getters['prontuario/getProntuarios']
+        if(this.search.patient_name)
+          await this.$store.dispatch('atendimento/filterByPatient', this.search.patient_name)
+        if(this.search.doctor_name)
+          await this.$store.dispatch('atendimento/filterByDoctor', this.search.doctor_name)
+        // this.atendimentos = this.$store.getters['prontuario/getProntuarios']
       } catch (err) {
         Swal.fire({
           icon: 'error',
@@ -57,16 +64,38 @@ export default {
     }
   },
   async created() {
-    await this.$store.dispatch('atendimento/list', this.search)
+    try{
+      await this.$store.dispatch('atendimento/list', this.search)
+    } catch (err) {
+      console.error(err)
+    }
   },
   data() {
     return {
       search: {
         patient_name: undefined,
-        doctor_name: undefined
-        
+        doctor_name: undefined,
+        mes: undefined,
+        ano: undefined
       },
-      atendimentos: []
+      atendimentos: [],
+      meses: [
+        {text: 'Janeiro', value: 1},
+        {text: 'Fevereiro', value: 2},
+        {text: 'Março', value: 3},
+        {text: 'Abril', value: 4},
+        {text: 'Maio', value: 5},
+        {text: 'Junho', value: 6},
+        {text: 'Julho', value: 7},
+        {text: 'Agosto', value: 8},
+        {text: 'Setembro', value: 9},
+        {text: 'Outubro', value: 10},
+        {text: 'Novembro', value: 11},
+        {text: 'Dezembro', value: 12}
+      ],
+      anos: [
+        2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008
+      ]
     }
   }
 }

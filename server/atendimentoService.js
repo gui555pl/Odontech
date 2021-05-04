@@ -13,7 +13,7 @@ function addAtendimento (app) {
 
 function listAtendimentos (app) {
     app.get('/listAtendimentos', (req, res) => {
-        let atendimentos = getAtendimentosList
+        let atendimentos = getAtendimentosList()
         res.send(atendimentos)
     })
 }
@@ -29,8 +29,8 @@ function getAtendimentosList () {
 
 function filterByDateRange (app) {
     app.get('/filterAtendimentoByRange', (req, res) => {
-        let from = req.params.from
-        let to = req.params.to
+        let from = req.query.from
+        let to = req.query.to
         let atendimentos = getAtendimentosList(app)
         console.log(atendimentos)
         let filteredAtendimentos = atendimentos.filter((atendimento) => {
@@ -46,7 +46,7 @@ function filterByDateRange (app) {
 
 function filterByPatient (app) {
     app.get('/filterAtendimentoByPatient', (req, res) => {
-        let patient = req.params.patient
+        let patient = req.query.patient
         let prontuarios =  examples.PRONTUARIO_LIST
         let filteredPront = prontuarios.filter((prontuario) => {
             return removeWhiteSpaces(removeAcento(prontuario.paciente.nome)).includes(removeWhiteSpaces(removeAcento(patient)))
@@ -61,10 +61,10 @@ function filterByPatient (app) {
 
 function filterByDoctor (app) {
     app.get('/filterAtendimentoByDoctor', (req, res) => {
-        let doctor = req.params.doctor
+        let doctor = req.query.doctor
         let atendimentos = getAtendimentosList(app)
         let filtered = atendimentos.filter((atendimento) => {
-            return atendimento.includes(doctor)
+            return atendimento.medico_responsavel.includes(doctor)
         })
         res.send(filtered)
     })
