@@ -1,28 +1,52 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+  v-app.default_background
+    HomeLayout(v-if='!isLogin')
+    template(v-else)
+      .image_login
+      LoginLayout
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LoginLayout from '../src/layouts/LoginLayout'
+import HomeLayout from '../src/layouts/HomeLayout'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    LoginLayout,
+    HomeLayout
+  },
+  computed: {
+    isLogin() {
+      return this.$route.path === "/login"
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.default_background {
+  background-color: #eee!important;
+}
+.image_login {
+  background-image: url("../public/img/OdontoTech.jpeg") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+.card_radius_drawer {
+  border-top-right-radius: 8px !important;
+  border-top-left-radius: 8px !important;
 }
 </style>
