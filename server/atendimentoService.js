@@ -55,7 +55,6 @@ function filterByDateRange (app) {
             res.send(filteredAtendimentos)
         else
         res.status(404).send('Nenhum atendimento encontrado')
-        res.send('oi')
     })
 }
 
