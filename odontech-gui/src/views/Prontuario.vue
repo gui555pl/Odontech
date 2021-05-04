@@ -26,8 +26,8 @@
                 v-list-item-avatar(color='grey lighten-2')
                   v-icon mdi-account
                 v-list-item-content
-                  v-list-item-title {{ item.name }}
-                  v-list-item-subtitle {{ item.cpf }} 
+                  v-list-item-title {{ item.paciente.nome }}
+                  v-list-item-subtitle {{ item.paciente.cpf }} 
                 v-list-item-action
                   v-icon(small)
                     | mdi-open-in-new
@@ -46,7 +46,7 @@ export default {
   methods: {
     async findProntuarios() {
       await this.$store.dispatch('prontuario/list', this.search)
-      this.prontuarios = this.$store.getters['prontuario/getProntuarios']
+      this.prontuarios = [this.$store.getters['prontuario/getProntuarios']]
     }
   },
   data() {

@@ -32,7 +32,6 @@ function findProntuarioByCPF(app) {
 
 function findProntuarioByName(app) {
     app.get('/findProntuarioByName', (req, res) => {
-        console.log(req.query)
         let name = req.query.name
         prontuarioList = examples.PRONTUARIO_LIST
         var found = prontuarioList.find((el) => {

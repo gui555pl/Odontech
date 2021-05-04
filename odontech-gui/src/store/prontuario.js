@@ -14,10 +14,11 @@ export const prontuario = {
     async list({ commit }, search) {
       let result = []
       if(search.cpf)
-        result = await axios.get('http://localhost:3000/findProntuarioByCPF', {cpf: search.cpf})
+        result = await axios.get('http://localhost:3000/findProntuarioByCPF', {params: {cpf: search.cpf}})
       if(search.nome)
-        result = await axios.get('http://localhost:3000/findProntuarioByName', {name: search.nome})
-      commit('setList', result)
+        result = await axios.get('http://localhost:3000/findProntuarioByName', {params: {name: search.nome}})
+      console.log(result)
+        commit('setList', result.data)
     }
   },
   mutations: {
