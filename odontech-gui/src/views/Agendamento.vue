@@ -1,14 +1,13 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    | a
-  </div>
+<template lang="pug">
+  v-row(no-gutters)
+    v-col(md=12 lg=6)
+      v-sheet(min-height='calc(100vh - 100px)' rounded='lg') A
 </template>
 
 <script>
 // @ is an alias to /src
 
 export default {
-  name: 'Home'
+  name: 'Agendamento'
 }
 </script>

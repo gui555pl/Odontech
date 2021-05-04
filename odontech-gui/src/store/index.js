@@ -14,12 +14,14 @@ const loginInformation = {
     activeUser: {},
     users: [
       {
-        email: 'denstista@email.com',
-        type: 'dentista'
+        email: 'dentista@email.com',
+        type: 'dentista',
+        image: 'https://image.freepik.com/free-vector/doctor-character-background_1270-84.jpg'
       },
       {
         email: 'recepcionista@email.com',
-        type: 'recepcionista'
+        type: 'recepcionista',
+        image: 'https://www.vacker360.com/wp-content/uploads/2020/07/front-desk-receptionist-duties.jpg'
       },
     ]
   },
@@ -29,6 +31,9 @@ const loginInformation = {
     },
     hasActiveUser: state => {
       return typeof state.activeUser.type === typeof '' && typeof state.activeUser.email === typeof ''
+    },
+    activeUser: state => {
+      return state.activeUser
     }
   },
   actions: {

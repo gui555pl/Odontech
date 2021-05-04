@@ -11,8 +11,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    redirect: '/agendamento',
+    path: '/agendamento',
     name: 'Agendamento',
     component: Agendamento
   },
@@ -40,13 +39,8 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  console.log(from)
-  console.log(to)
-  console.log(to.path)
-  if (to.matched.some(record => record.path !== '/login') || to.path === '/agendamento') {
-    console.log(store)
+  if (to.matched.some(record => record.path !== '/login') || to.path === '/') {
     if (store.getters['loginInformation/hasActiveUser'] === false) {
-      console.log('aq')
       next({
         path: '/login',
         params: { nextUrl: to.fullPath }
