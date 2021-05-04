@@ -3,6 +3,7 @@ var examples = {
     ],
     PRONTUARIO_LIST: [
         {
+            id: '1',
             paciente: {
                 nome: 'João Asfora Rodrigues',
                 cpf: '123456789-01',
@@ -35,6 +36,7 @@ var examples = {
             ]
         },
         {
+            id: '2',
             paciente: {
                 nome: 'João Asfora Silva',
                 cpf: '987654321-98',
