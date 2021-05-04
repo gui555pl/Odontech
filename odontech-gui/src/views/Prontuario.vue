@@ -5,7 +5,7 @@
         .text-h5.mb-5 Prontuários
         v-row
           v-col(cols='auto' align-self='center')
-            .text-subtitle- Procurar por:
+            .text-subtitle-1 Procurar por:
           v-col(cols='auto' align-self='center')
             v-select(v-model='type' :items='["CPF", "Nome"]' filled hide-details style='width: 100px;')
           v-col(cols='auto' align-self='center')
