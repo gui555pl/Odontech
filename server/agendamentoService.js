@@ -19,9 +19,9 @@ function listAgendamento (app) {
 }
 
 
-function initiAgendamento (app) {
+function initAgendamento (app) {
     addAgendamento(app)
     listAgendamento(app)
 }
 
-module.exports = { initiAgendamento }
+module.exports = { initAgendamento }
