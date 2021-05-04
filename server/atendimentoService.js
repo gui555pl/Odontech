@@ -28,7 +28,18 @@ function filterByDateRange (app) {
 }
 
 function filterByPatient (app) {
-
+    app.get('/filterAtendimentoByPatient', (req, res) => {
+        let patient = req.params.patient
+        let prontuarios =  examples.PRONTUARIO_LIST
+        let filteredPront = prontuarios.filter((prontuario) => {
+            return removeWhiteSpaces(removeAcento(prontuario.paciente.nome)).includes(removeWhiteSpaces(removeAcento(patient)))
+        })
+        let selectedAtendimentos = filteredPront.reduce((acc, prontuario) => {
+            return acc.concat(prontuario.atendimento)
+        },[])
+        
+        res.send(selectedAtendimentos)
+    })
 }
 
 function filterByDoctor (app) {
@@ -36,11 +47,9 @@ function filterByDoctor (app) {
         let doctor = req.params.doctor
         let atendimentos = listAtendimentos(app)
         let filtered = atendimentos.filter((atendimento) => {
-            if (atendimento.medico_responsavel === doctor) {
-
-            }
+            return atendimento.includes(doctor)
         })
-        
+        res.send(filtered)
     })
 }
 
