@@ -1,0 +1,909 @@
+
+> test
+> cucumber-js
+
+UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
+
+Failures:
+
+1) Scenario: Criar um novo agendamento # features/Agendamento.feature:9
+   ? Given Eu estou no menu de agendamentos
+       Undefined. Implement with the following snippet:
+
+         Given('Eu estou no menu de agendamentos', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And O agendamento "12345678910" não aparece na lista de agendamentos
+       Undefined. Implement with the following snippet:
+
+         Given('O agendamento {string} não aparece na lista de agendamentos', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? When Eu seleciono a opção para adicionar um agendamento
+       Undefined. Implement with the following snippet:
+
+         When('Eu seleciono a opção para adicionar um agendamento', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Eu tento cadastrar o agendamento "12345678910" com nome "Maria"
+       Undefined. Implement with the following snippet:
+
+         When('Eu tento cadastrar o agendamento {string} com nome {string}', function (string, string2) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Com horário para o dia 16 do mês 10 às 10:30 horas
+       Undefined. Implement with the following snippet:
+
+         When('Com horário para o dia {int} do mês {int} às {int}:{int} horas', function (int, int2, int3, int4) {
+         // When('Com horário para o dia {int} do mês {int} às {int}:{float} horas', function (int, int2, int3, float) {
+         // When('Com horário para o dia {int} do mês {int} às {float}:{int} horas', function (int, int2, float, int3) {
+         // When('Com horário para o dia {int} do mês {int} às {float}:{float} horas', function (int, int2, float, float2) {
+         // When('Com horário para o dia {int} do mês {float} às {int}:{int} horas', function (int, float, int2, int3) {
+         // When('Com horário para o dia {int} do mês {float} às {int}:{float} horas', function (int, float, int2, float2) {
+         // When('Com horário para o dia {int} do mês {float} às {float}:{int} horas', function (int, float, float2, int2) {
+         // When('Com horário para o dia {int} do mês {float} às {float}:{float} horas', function (int, float, float2, float3) {
+         // When('Com horário para o dia {float} do mês {int} às {int}:{int} horas', function (float, int, int2, int3) {
+         // When('Com horário para o dia {float} do mês {int} às {int}:{float} horas', function (float, int, int2, float2) {
+         // When('Com horário para o dia {float} do mês {int} às {float}:{int} horas', function (float, int, float2, int2) {
+         // When('Com horário para o dia {float} do mês {int} às {float}:{float} horas', function (float, int, float2, float3) {
+         // When('Com horário para o dia {float} do mês {float} às {int}:{int} horas', function (float, float2, int, int2) {
+         // When('Com horário para o dia {float} do mês {float} às {int}:{float} horas', function (float, float2, int, float3) {
+         // When('Com horário para o dia {float} do mês {float} às {float}:{int} horas', function (float, float2, float3, int) {
+         // When('Com horário para o dia {float} do mês {float} às {float}:{float} horas', function (float, float2, float3, float4) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Com médico responsável sendo "Felipe"
+       Undefined. Implement with the following snippet:
+
+         When('Com médico responsável sendo {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? Then Eu posso ver uma mensagem de confirmação
+       Undefined. Implement with the following snippet:
+
+         Then('Eu posso ver uma mensagem de confirmação', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Eu vejo o agendamento "12345678910" com nome "Maria", médico "Felipe" e data para 16 do mês 10 às 10:30 horas na lista de agendamentos
+       Undefined. Implement with the following snippet:
+
+         Then('Eu vejo o agendamento {string} com nome {string}, médico {string} e data para {int} do mês {int} às {int}:{int} horas na lista de agendamentos', function (string, string2, string3, int, int2, int3, int4) {
+         // Then('Eu vejo o agendamento {string} com nome {string}, médico {string} e data para {int} do mês {int} às {int}:{float} horas na lista de agendamentos', function (string, string2, string3, int, int2, int3, float) {
+         // Then('Eu vejo o agendamento {string} com nome {string}, médico {string} e data para {int} do mês {int} às {float}:{int} horas na lista de agendamentos', function (string, string2, string3, int, int2, float, int3) {
+         // Then('Eu vejo o agendamento {string} com nome {string}, médico {string} e data para {int} do mês {int} às {float}:{float} horas na lista de agendamentos', function (string, string2, string3, int, int2, float, float2) {
+         // Then('Eu vejo o agendamento {string} com nome {string}, médico {string} e data para {int} do mês {float} às {int}:{int} horas na lista de agendamentos', function (string, string2, string3, int, float, int2, int3) {
+         // Then('Eu vejo o agendamento {string} com nome {string}, médico {string} e data para {int} do mês {float} às {int}:{float} horas na lista de agendamentos', function (string, string2, string3, int, float, int2, float2) {
+         // Then('Eu vejo o agendamento {string} com nome {string}, médico {string} e data para {int} do mês {float} às {float}:{int} horas na lista de agendamentos', function (string, string2, string3, int, float, float2, int2) {
+         // Then('Eu vejo o agendamento {string} com nome {string}, médico {string} e data para {int} do mês {float} às {float}:{float} horas na lista de agendamentos', function (string, string2, string3, int, float, float2, float3) {
+         // Then('Eu vejo o agendamento {string} com nome {string}, médico {string} e data para {float} do mês {int} às {int}:{int} horas na lista de agendamentos', function (string, string2, string3, float, int, int2, int3) {
+         // Then('Eu vejo o agendamento {string} com nome {string}, médico {string} e data para {float} do mês {int} às {int}:{float} horas na lista de agendamentos', function (string, string2, string3, float, int, int2, float2) {
+         // Then('Eu vejo o agendamento {string} com nome {string}, médico {string} e data para {float} do mês {int} às {float}:{int} horas na lista de agendamentos', function (string, string2, string3, float, int, float2, int2) {
+         // Then('Eu vejo o agendamento {string} com nome {string}, médico {string} e data para {float} do mês {int} às {float}:{float} horas na lista de agendamentos', function (string, string2, string3, float, int, float2, float3) {
+         // Then('Eu vejo o agendamento {string} com nome {string}, médico {string} e data para {float} do mês {float} às {int}:{int} horas na lista de agendamentos', function (string, string2, string3, float, float2, int, int2) {
+         // Then('Eu vejo o agendamento {string} com nome {string}, médico {string} e data para {float} do mês {float} às {int}:{float} horas na lista de agendamentos', function (string, string2, string3, float, float2, int, float3) {
+         // Then('Eu vejo o agendamento {string} com nome {string}, médico {string} e data para {float} do mês {float} às {float}:{int} horas na lista de agendamentos', function (string, string2, string3, float, float2, float3, int) {
+         // Then('Eu vejo o agendamento {string} com nome {string}, médico {string} e data para {float} do mês {float} às {float}:{float} horas na lista de agendamentos', function (string, string2, string3, float, float2, float3, float4) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+
+2) Scenario: Criar um agendamento com horário já indisponível # features/Agendamento.feature:19
+   ? Given Eu estou no menu de agendamentos
+       Undefined. Implement with the following snippet:
+
+         Given('Eu estou no menu de agendamentos', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And O agendamento "12345678910" não aparece na lista de agendamentos
+       Undefined. Implement with the following snippet:
+
+         Given('O agendamento {string} não aparece na lista de agendamentos', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And O agendamento "01987654321" está marcado para o dia 16 do mês 10 às 10:30 horas
+       Undefined. Implement with the following snippet:
+
+         Given('O agendamento {string} está marcado para o dia {int} do mês {int} às {int}:{int} horas', function (string, int, int2, int3, int4) {
+         // Given('O agendamento {string} está marcado para o dia {int} do mês {int} às {int}:{float} horas', function (string, int, int2, int3, float) {
+         // Given('O agendamento {string} está marcado para o dia {int} do mês {int} às {float}:{int} horas', function (string, int, int2, float, int3) {
+         // Given('O agendamento {string} está marcado para o dia {int} do mês {int} às {float}:{float} horas', function (string, int, int2, float, float2) {
+         // Given('O agendamento {string} está marcado para o dia {int} do mês {float} às {int}:{int} horas', function (string, int, float, int2, int3) {
+         // Given('O agendamento {string} está marcado para o dia {int} do mês {float} às {int}:{float} horas', function (string, int, float, int2, float2) {
+         // Given('O agendamento {string} está marcado para o dia {int} do mês {float} às {float}:{int} horas', function (string, int, float, float2, int2) {
+         // Given('O agendamento {string} está marcado para o dia {int} do mês {float} às {float}:{float} horas', function (string, int, float, float2, float3) {
+         // Given('O agendamento {string} está marcado para o dia {float} do mês {int} às {int}:{int} horas', function (string, float, int, int2, int3) {
+         // Given('O agendamento {string} está marcado para o dia {float} do mês {int} às {int}:{float} horas', function (string, float, int, int2, float2) {
+         // Given('O agendamento {string} está marcado para o dia {float} do mês {int} às {float}:{int} horas', function (string, float, int, float2, int2) {
+         // Given('O agendamento {string} está marcado para o dia {float} do mês {int} às {float}:{float} horas', function (string, float, int, float2, float3) {
+         // Given('O agendamento {string} está marcado para o dia {float} do mês {float} às {int}:{int} horas', function (string, float, float2, int, int2) {
+         // Given('O agendamento {string} está marcado para o dia {float} do mês {float} às {int}:{float} horas', function (string, float, float2, int, float3) {
+         // Given('O agendamento {string} está marcado para o dia {float} do mês {float} às {float}:{int} horas', function (string, float, float2, float3, int) {
+         // Given('O agendamento {string} está marcado para o dia {float} do mês {float} às {float}:{float} horas', function (string, float, float2, float3, float4) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? When Eu seleciono a opção para adicionar um agendamento
+       Undefined. Implement with the following snippet:
+
+         When('Eu seleciono a opção para adicionar um agendamento', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Eu tento cadastrar o agendamento "12345678910" com nome "Maria"
+       Undefined. Implement with the following snippet:
+
+         When('Eu tento cadastrar o agendamento {string} com nome {string}', function (string, string2) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Com horário para o dia 16 do mês 10 às 10:30 horas
+       Undefined. Implement with the following snippet:
+
+         When('Com horário para o dia {int} do mês {int} às {int}:{int} horas', function (int, int2, int3, int4) {
+         // When('Com horário para o dia {int} do mês {int} às {int}:{float} horas', function (int, int2, int3, float) {
+         // When('Com horário para o dia {int} do mês {int} às {float}:{int} horas', function (int, int2, float, int3) {
+         // When('Com horário para o dia {int} do mês {int} às {float}:{float} horas', function (int, int2, float, float2) {
+         // When('Com horário para o dia {int} do mês {float} às {int}:{int} horas', function (int, float, int2, int3) {
+         // When('Com horário para o dia {int} do mês {float} às {int}:{float} horas', function (int, float, int2, float2) {
+         // When('Com horário para o dia {int} do mês {float} às {float}:{int} horas', function (int, float, float2, int2) {
+         // When('Com horário para o dia {int} do mês {float} às {float}:{float} horas', function (int, float, float2, float3) {
+         // When('Com horário para o dia {float} do mês {int} às {int}:{int} horas', function (float, int, int2, int3) {
+         // When('Com horário para o dia {float} do mês {int} às {int}:{float} horas', function (float, int, int2, float2) {
+         // When('Com horário para o dia {float} do mês {int} às {float}:{int} horas', function (float, int, float2, int2) {
+         // When('Com horário para o dia {float} do mês {int} às {float}:{float} horas', function (float, int, float2, float3) {
+         // When('Com horário para o dia {float} do mês {float} às {int}:{int} horas', function (float, float2, int, int2) {
+         // When('Com horário para o dia {float} do mês {float} às {int}:{float} horas', function (float, float2, int, float3) {
+         // When('Com horário para o dia {float} do mês {float} às {float}:{int} horas', function (float, float2, float3, int) {
+         // When('Com horário para o dia {float} do mês {float} às {float}:{float} horas', function (float, float2, float3, float4) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Com médico responsável sendo "Felipe"
+       Undefined. Implement with the following snippet:
+
+         When('Com médico responsável sendo {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? Then Eu posso ver uma mensagem de agendamento inválido
+       Undefined. Implement with the following snippet:
+
+         Then('Eu posso ver uma mensagem de agendamento inválido', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Eu não vejo o agendamento "12345678910" na lista de agendamentos
+       Undefined. Implement with the following snippet:
+
+         Then('Eu não vejo o agendamento {string} na lista de agendamentos', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+
+3) Scenario: Criar um agendamento com informações incompletas # features/Agendamento.feature:30
+   ? Given Eu estou no menu de agendamentos
+       Undefined. Implement with the following snippet:
+
+         Given('Eu estou no menu de agendamentos', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And O agendamento "12345678910" não aparece na lista de agendamentos
+       Undefined. Implement with the following snippet:
+
+         Given('O agendamento {string} não aparece na lista de agendamentos', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? When Eu seleciono a opção para adicionar um agendamento
+       Undefined. Implement with the following snippet:
+
+         When('Eu seleciono a opção para adicionar um agendamento', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Eu tento cadastrar o agendamento "12345678910" com nome "Maria"
+       Undefined. Implement with the following snippet:
+
+         When('Eu tento cadastrar o agendamento {string} com nome {string}', function (string, string2) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Com médico responsável sendo "Felipe"
+       Undefined. Implement with the following snippet:
+
+         When('Com médico responsável sendo {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Sem data e hora para o agendamento
+       Undefined. Implement with the following snippet:
+
+         When('Sem data e hora para o agendamento', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? Then Eu posso ver uma mensagem de agendamento inválido
+       Undefined. Implement with the following snippet:
+
+         Then('Eu posso ver uma mensagem de agendamento inválido', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Eu não vejo o agendamento "12345678910" na lista de agendamentos
+       Undefined. Implement with the following snippet:
+
+         Then('Eu não vejo o agendamento {string} na lista de agendamentos', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+
+4) Scenario: Retornar o tempo restante até o agendamento # features/Agendamento.feature:42
+   ? Given O agendamento '12345678910' é armazenado no sistema para o dia 16 do mês 10 às 10:30 horas
+       Undefined. Implement with the following snippet:
+
+         Given('O agendamento {string} é armazenado no sistema para o dia {int} do mês {int} às {int}:{int} horas', function (string, int, int2, int3, int4) {
+         // Given('O agendamento {string} é armazenado no sistema para o dia {int} do mês {int} às {int}:{float} horas', function (string, int, int2, int3, float) {
+         // Given('O agendamento {string} é armazenado no sistema para o dia {int} do mês {int} às {float}:{int} horas', function (string, int, int2, float, int3) {
+         // Given('O agendamento {string} é armazenado no sistema para o dia {int} do mês {int} às {float}:{float} horas', function (string, int, int2, float, float2) {
+         // Given('O agendamento {string} é armazenado no sistema para o dia {int} do mês {float} às {int}:{int} horas', function (string, int, float, int2, int3) {
+         // Given('O agendamento {string} é armazenado no sistema para o dia {int} do mês {float} às {int}:{float} horas', function (string, int, float, int2, float2) {
+         // Given('O agendamento {string} é armazenado no sistema para o dia {int} do mês {float} às {float}:{int} horas', function (string, int, float, float2, int2) {
+         // Given('O agendamento {string} é armazenado no sistema para o dia {int} do mês {float} às {float}:{float} horas', function (string, int, float, float2, float3) {
+         // Given('O agendamento {string} é armazenado no sistema para o dia {float} do mês {int} às {int}:{int} horas', function (string, float, int, int2, int3) {
+         // Given('O agendamento {string} é armazenado no sistema para o dia {float} do mês {int} às {int}:{float} horas', function (string, float, int, int2, float2) {
+         // Given('O agendamento {string} é armazenado no sistema para o dia {float} do mês {int} às {float}:{int} horas', function (string, float, int, float2, int2) {
+         // Given('O agendamento {string} é armazenado no sistema para o dia {float} do mês {int} às {float}:{float} horas', function (string, float, int, float2, float3) {
+         // Given('O agendamento {string} é armazenado no sistema para o dia {float} do mês {float} às {int}:{int} horas', function (string, float, float2, int, int2) {
+         // Given('O agendamento {string} é armazenado no sistema para o dia {float} do mês {float} às {int}:{float} horas', function (string, float, float2, int, float3) {
+         // Given('O agendamento {string} é armazenado no sistema para o dia {float} do mês {float} às {float}:{int} horas', function (string, float, float2, float3, int) {
+         // Given('O agendamento {string} é armazenado no sistema para o dia {float} do mês {float} às {float}:{float} horas', function (string, float, float2, float3, float4) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Hoje é dia 15 o mês 10 às 09:00 horas
+       Undefined. Implement with the following snippet:
+
+         Given('Hoje é dia {int} o mês {int} às {int}:{int} horas', function (int, int2, int3, int4) {
+         // Given('Hoje é dia {int} o mês {int} às {int}:{float} horas', function (int, int2, int3, float) {
+         // Given('Hoje é dia {int} o mês {int} às {float}:{int} horas', function (int, int2, float, int3) {
+         // Given('Hoje é dia {int} o mês {int} às {float}:{float} horas', function (int, int2, float, float2) {
+         // Given('Hoje é dia {int} o mês {float} às {int}:{int} horas', function (int, float, int2, int3) {
+         // Given('Hoje é dia {int} o mês {float} às {int}:{float} horas', function (int, float, int2, float2) {
+         // Given('Hoje é dia {int} o mês {float} às {float}:{int} horas', function (int, float, float2, int2) {
+         // Given('Hoje é dia {int} o mês {float} às {float}:{float} horas', function (int, float, float2, float3) {
+         // Given('Hoje é dia {float} o mês {int} às {int}:{int} horas', function (float, int, int2, int3) {
+         // Given('Hoje é dia {float} o mês {int} às {int}:{float} horas', function (float, int, int2, float2) {
+         // Given('Hoje é dia {float} o mês {int} às {float}:{int} horas', function (float, int, float2, int2) {
+         // Given('Hoje é dia {float} o mês {int} às {float}:{float} horas', function (float, int, float2, float3) {
+         // Given('Hoje é dia {float} o mês {float} às {int}:{int} horas', function (float, float2, int, int2) {
+         // Given('Hoje é dia {float} o mês {float} às {int}:{float} horas', function (float, float2, int, float3) {
+         // Given('Hoje é dia {float} o mês {float} às {float}:{int} horas', function (float, float2, float3, int) {
+         // Given('Hoje é dia {float} o mês {float} às {float}:{float} horas', function (float, float2, float3, float4) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? When Eu solicito ao sistema o tempo restante até o agendamento '12345678910'
+       Undefined. Implement with the following snippet:
+
+         When('Eu solicito ao sistema o tempo restante até o agendamento {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? Then O sistema retorna o tempo restante de 25 horas e 30 minutos
+       Undefined. Implement with the following snippet:
+
+         Then('O sistema retorna o tempo restante de {int} horas e {int} minutos', function (int, int2) {
+         // Then('O sistema retorna o tempo restante de {int} horas e {float} minutos', function (int, float) {
+         // Then('O sistema retorna o tempo restante de {float} horas e {int} minutos', function (float, int) {
+         // Then('O sistema retorna o tempo restante de {float} horas e {float} minutos', function (float, float2) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+
+5) Scenario: Impedir a criação de um agendamento inválido # features/Agendamento.feature:48
+   ? Given Eu desejo criar o agendamento '12345678910' no sistema para o dia 16 do mês 10 às 10:30 horas
+       Undefined. Implement with the following snippet:
+
+         Given('Eu desejo criar o agendamento {string} no sistema para o dia {int} do mês {int} às {int}:{int} horas', function (string, int, int2, int3, int4) {
+         // Given('Eu desejo criar o agendamento {string} no sistema para o dia {int} do mês {int} às {int}:{float} horas', function (string, int, int2, int3, float) {
+         // Given('Eu desejo criar o agendamento {string} no sistema para o dia {int} do mês {int} às {float}:{int} horas', function (string, int, int2, float, int3) {
+         // Given('Eu desejo criar o agendamento {string} no sistema para o dia {int} do mês {int} às {float}:{float} horas', function (string, int, int2, float, float2) {
+         // Given('Eu desejo criar o agendamento {string} no sistema para o dia {int} do mês {float} às {int}:{int} horas', function (string, int, float, int2, int3) {
+         // Given('Eu desejo criar o agendamento {string} no sistema para o dia {int} do mês {float} às {int}:{float} horas', function (string, int, float, int2, float2) {
+         // Given('Eu desejo criar o agendamento {string} no sistema para o dia {int} do mês {float} às {float}:{int} horas', function (string, int, float, float2, int2) {
+         // Given('Eu desejo criar o agendamento {string} no sistema para o dia {int} do mês {float} às {float}:{float} horas', function (string, int, float, float2, float3) {
+         // Given('Eu desejo criar o agendamento {string} no sistema para o dia {float} do mês {int} às {int}:{int} horas', function (string, float, int, int2, int3) {
+         // Given('Eu desejo criar o agendamento {string} no sistema para o dia {float} do mês {int} às {int}:{float} horas', function (string, float, int, int2, float2) {
+         // Given('Eu desejo criar o agendamento {string} no sistema para o dia {float} do mês {int} às {float}:{int} horas', function (string, float, int, float2, int2) {
+         // Given('Eu desejo criar o agendamento {string} no sistema para o dia {float} do mês {int} às {float}:{float} horas', function (string, float, int, float2, float3) {
+         // Given('Eu desejo criar o agendamento {string} no sistema para o dia {float} do mês {float} às {int}:{int} horas', function (string, float, float2, int, int2) {
+         // Given('Eu desejo criar o agendamento {string} no sistema para o dia {float} do mês {float} às {int}:{float} horas', function (string, float, float2, int, float3) {
+         // Given('Eu desejo criar o agendamento {string} no sistema para o dia {float} do mês {float} às {float}:{int} horas', function (string, float, float2, float3, int) {
+         // Given('Eu desejo criar o agendamento {string} no sistema para o dia {float} do mês {float} às {float}:{float} horas', function (string, float, float2, float3, float4) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Já existe um agendamento '01987654321' para esse mesmo horário
+       Undefined. Implement with the following snippet:
+
+         Given('Já existe um agendamento {string} para esse mesmo horário', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? When Eu solicito ao sistema a criação do agendamento '12345678910'
+       Undefined. Implement with the following snippet:
+
+         When('Eu solicito ao sistema a criação do agendamento {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? Then O sistema retorna que o agendamento é inválido por conflito de horários
+       Undefined. Implement with the following snippet:
+
+         Then('O sistema retorna que o agendamento é inválido por conflito de horários', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And O agendamento '12345678910' não é armazenado
+       Undefined. Implement with the following snippet:
+
+         Then('O agendamento {string} não é armazenado', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+
+6) Scenario: O dentista busca por um prontuário usando o CPF do paciente. O sistema retorna um item para ser exibido na lista. # features/buscaProntuario.feature:9
+   ? Given eu estou na página "Prontuários"
+       Undefined. Implement with the following snippet:
+
+         Given('eu estou na página {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? When Eu digito o CPF "123456789-01" no campo de busca por CPF
+       Undefined. Implement with the following snippet:
+
+         When('Eu digito o CPF {string} no campo de busca por CPF', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Eu requisito o sistema para "buscar"
+       Undefined. Implement with the following snippet:
+
+         When('Eu requisito o sistema para {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? Then O sistema mostra um item com "Prontuário de João Asfora Rodrigues"
+       Undefined. Implement with the following snippet:
+
+         Then('O sistema mostra um item com {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+
+7) Scenario: O dentista busca por um prontuário usando o nome do paciente. O sistema retorna dois itens para serem exibidos na lista. # features/buscaProntuario.feature:15
+   ? Given eu estou na página "Prontuários"
+       Undefined. Implement with the following snippet:
+
+         Given('eu estou na página {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? When Eu digito o nome "João Asfora" no campo de busca por nome
+       Undefined. Implement with the following snippet:
+
+         When('Eu digito o nome {string} no campo de busca por nome', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Eu requisito o sistema para "buscar"
+       Undefined. Implement with the following snippet:
+
+         When('Eu requisito o sistema para {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? Then O sistema mostra um item com "Prontuário de João Asfora Rodrigues"
+       Undefined. Implement with the following snippet:
+
+         Then('O sistema mostra um item com {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And O sistema mostra um item com "Prontuário de João Asfora Silva"
+       Undefined. Implement with the following snippet:
+
+         Then('O sistema mostra um item com {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+
+8) Scenario: O dentista busca por um prontuário usando o CPF do paciente, porém não existe nenhum prontuário registrado com esse CPF. O sistema retorna uma mensagem de erro. # features/buscaProntuario.feature:22
+   ? Given eu estou na página "Prontuários"
+       Undefined. Implement with the following snippet:
+
+         Given('eu estou na página {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? When Eu digito o CPF "999999999-99" no campo de busca por CPF
+       Undefined. Implement with the following snippet:
+
+         When('Eu digito o CPF {string} no campo de busca por CPF', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Eu requisito o sistema para "buscar"
+       Undefined. Implement with the following snippet:
+
+         When('Eu requisito o sistema para {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? Then O sistema mostra uma mensagem de erro com "Nenhum prontuário encontrado"
+       Undefined. Implement with the following snippet:
+
+         Then('O sistema mostra uma mensagem de erro com {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+
+9) Scenario: O dentista busca por um prontuário usando o CPF do paciente, porém sua conexão com a internet caiu. O sistema retorna uma mensagem de erro. # features/buscaProntuario.feature:28
+   ? Given eu estou na página "Prontuários"
+       Undefined. Implement with the following snippet:
+
+         Given('eu estou na página {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? When Eu digito o CPF "999999999-99" no campo de busca por CPF
+       Undefined. Implement with the following snippet:
+
+         When('Eu digito o CPF {string} no campo de busca por CPF', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And Eu requisito o sistema para "buscar"
+       Undefined. Implement with the following snippet:
+
+         When('Eu requisito o sistema para {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? Then O sistema mostra uma mensagem de erro com "Houve um erro com sua requisição, verifique a sua conexão e tente novamente."
+       Undefined. Implement with the following snippet:
+
+         Then('O sistema mostra uma mensagem de erro com {string}', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+
+10) Scenario: Busca de prontuários por CPF. O sistema retorna um prontuário # features/buscaProntuario.feature:36
+    ? Given os prontuários "1, João Asfora Rodrigues, 123456789-01, 09, 02, 2020, 08:37" e "2, João Asfora Silva, 987654321-98, 10, 04, 2019, 08:36" estão armazenados no sistema
+        Undefined. Implement with the following snippet:
+
+          Given('os prontuários {string} e {string} estão armazenados no sistema', function (string, string2) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? When o usuário solicita a busca de prontuários com CPF "123456789-01"
+        Undefined. Implement with the following snippet:
+
+          When('o usuário solicita a busca de prontuários com CPF {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? Then o sistema retorna um prontuário incluindo informações como nome do paciente, CPF do paciente, dia de criação, mês de criação, ano de criação e hora de criação com os valores "João Asfora Rodrigues, 123456789-01, 09, 02, 2020, 08:37"
+        Undefined. Implement with the following snippet:
+
+          Then('o sistema retorna um prontuário incluindo informações como nome do paciente, CPF do paciente, dia de criação, mês de criação, ano de criação e hora de criação com os valores {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+
+11) Scenario: Busca de prontuários por nome. O sistema retorna dois prontuários. # features/buscaProntuario.feature:41
+    ? Given os prontuários "1, João Asfora Rodrigues, 123456789-01, 09, 02, 2020, 08:37" e "2, João Asfora Silva, 987654321-98, 10, 04, 2019, 08:36" estão armazenados no sistema
+        Undefined. Implement with the following snippet:
+
+          Given('os prontuários {string} e {string} estão armazenados no sistema', function (string, string2) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? When o usuário solicita a busca de prontuários com nome "João Asfora"
+        Undefined. Implement with the following snippet:
+
+          When('o usuário solicita a busca de prontuários com nome {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? Then o sistema retorna dois prontuários incluindo informações como nome do paciente, CPF do paciente, dia de criação, mês de criação, ano de criação e hora de criação com os valores "João Asfora Rodrigues, 123456789-01, 09, 02, 2020, 08:37" e "João Asfora Silva, 987654321-98, 10, 04, 2019, 08:36"
+        Undefined. Implement with the following snippet:
+
+          Then('o sistema retorna dois prontuários incluindo informações como nome do paciente, CPF do paciente, dia de criação, mês de criação, ano de criação e hora de criação com os valores {string} e {string}', function (string, string2) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+
+12) Scenario: Busca de prontuários por CPF, porém não existe nenhum prontuário registrado com esse CPF. O sistema retorna um código de erro. # features/buscaProntuario.feature:46
+    ? Given os prontuários "1, João Asfora Rodrigues, 123456789-01, 09, 02, 2020, 08:37" e "2, João Asfora Silva, 987654321-98, 10, 04, 2019, 08:36" estão armazenados no sistema
+        Undefined. Implement with the following snippet:
+
+          Given('os prontuários {string} e {string} estão armazenados no sistema', function (string, string2) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? When o usuário solicita a busca de prontuários com CPF "999999999-99"
+        Undefined. Implement with the following snippet:
+
+          When('o usuário solicita a busca de prontuários com CPF {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? Then o sistema retorna o código de erro "404"
+        Undefined. Implement with the following snippet:
+
+          Then('o sistema retorna o código de erro {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+
+13) Scenario: O dentista precisa filtrar todos os atendimentos por um range de datas. # features/FiltroAtendimento.feature:8
+    ? Given Eu estou na página de "Atendimentos"
+        Undefined. Implement with the following snippet:
+
+          Given('Eu estou na página de {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? And Os atendimentos "João Asfora Rodrigues, 123456789-01, consulta, 09-04-2020, 10:59, Igor Henrique" e "João Asfora Rodrigues, 123456789-01, cirurgia, 15-04-2020, 10:59, Galindo Vinícius" e "João Asfora Silva, 987654321-98, consulta, 09-03-2020, 12:59, Karlos Gubianni" estão armazenadas no sistema.
+        Undefined. Implement with the following snippet:
+
+          Given('Os atendimentos {string} e {string} e {string} estão armazenadas no sistema.', function (string, string2, string3) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? When Eu digito a data inicial "01-04-2020"
+        Undefined. Implement with the following snippet:
+
+          When('Eu digito a data inicial {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? And Eu digito a data final "30-04-2020"
+        Undefined. Implement with the following snippet:
+
+          When('Eu digito a data final {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? And Eu requisito o sistema para "filtrar"
+        Undefined. Implement with the following snippet:
+
+          When('Eu requisito o sistema para {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? Then Eu vejo uma lista com os atendimentos de nome do paciente, CPF do paciente, tipo, data, hora, nome do dentista com os valores "João Asfora Rodrigues, 123456789-01, consulta, 09-04-2020, 10:59, Igor Henrique" e "João Asfora Rodrigues, 123456789-01, cirurgia, 15-04-2020, 10:59, Galindo Vinícius"
+        Undefined. Implement with the following snippet:
+
+          Then('Eu vejo uma lista com os atendimentos de nome do paciente, CPF do paciente, tipo, data, hora, nome do dentista com os valores {string} e {string}', function (string, string2) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+
+14) Scenario: O dentista precisa filtrar todos os atendimentos pelo tipo. # features/FiltroAtendimento.feature:16
+    ? Given Eu estou na página de "Atendimentos"
+        Undefined. Implement with the following snippet:
+
+          Given('Eu estou na página de {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? And Os atendimentos "João Asfora Rodrigues, 123456789-01, consulta, 09-04-2020, 10:59, Igor Henrique" e "João Asfora Rodrigues, 123456789-01, cirurgia, 15-04-2020, 10:59, Galindo Vinícius" e "João Asfora Silva, 987654321-98, consulta, 09-03-2020, 12:59, Karlos Gubianni" estão armazenadas no sistema.
+        Undefined. Implement with the following snippet:
+
+          Given('Os atendimentos {string} e {string} e {string} estão armazenadas no sistema.', function (string, string2, string3) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? When Eu escolho filtrar pelo tipo "cirurgia"
+        Undefined. Implement with the following snippet:
+
+          When('Eu escolho filtrar pelo tipo {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? And Eu requisito o sistema para "filtrar"
+        Undefined. Implement with the following snippet:
+
+          When('Eu requisito o sistema para {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? Then Eu vejo uma lista com o atendimento de nome do paciente, CPF do paciente, tipo, data, hora, nome do dentista com os valores "João Asfora Rodrigues, 123456789-01, cirurgia, 15-04-2020, 10:59, Galindo Vinícius"
+        Undefined. Implement with the following snippet:
+
+          Then('Eu vejo uma lista com o atendimento de nome do paciente, CPF do paciente, tipo, data, hora, nome do dentista com os valores {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+
+15) Scenario: O dentista precisa filtrar todos os atendimentos pelo CPF do paciente. # features/FiltroAtendimento.feature:23
+    ? Given Eu estou na página de "Atendimentos"
+        Undefined. Implement with the following snippet:
+
+          Given('Eu estou na página de {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? And Os atendimentos "João Asfora Rodrigues, 123456789-01, consulta, 09-04-2020, 10:59, Igor Henrique" e "João Asfora Rodrigues, 123456789-01, cirurgia, 15-04-2020, 10:59, Galindo Vinícius" e "João Asfora Silva, 987654321-98, consulta, 09-03-2020, 12:59, Karlos Gubianni" estão armazenadas no sistema.
+        Undefined. Implement with the following snippet:
+
+          Given('Os atendimentos {string} e {string} e {string} estão armazenadas no sistema.', function (string, string2, string3) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? When Eu escolho filtrar pelo CPF "987654321-98"
+        Undefined. Implement with the following snippet:
+
+          When('Eu escolho filtrar pelo CPF {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? And Eu requisito o sistema para "filtrar"
+        Undefined. Implement with the following snippet:
+
+          When('Eu requisito o sistema para {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? Then Eu vejo uma lista com o atendimento de nome do paciente, CPF do paciente, tipo, data, hora, nome do dentista com os valores "João Asfora Silva, 987654321-98, consulta, 09-03-2020, 12:59, Karlos Gubianni"
+        Undefined. Implement with the following snippet:
+
+          Then('Eu vejo uma lista com o atendimento de nome do paciente, CPF do paciente, tipo, data, hora, nome do dentista com os valores {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+
+16) Scenario: O dentista precisa filtrar todos os atendimentos por um range de datas, porém não existem atendimentos registrados naquele período. # features/FiltroAtendimento.feature:30
+    ? Given Eu estou na página de "Atendimentos"
+        Undefined. Implement with the following snippet:
+
+          Given('Eu estou na página de {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? And Os atendimentos "João Asfora Rodrigues, 123456789-01, consulta, 09-04-2020, 10:59, Igor Henrique" e "João Asfora Rodrigues, 123456789-01, cirurgia, 15-04-2020, 10:59, Galindo Vinícius" e "João Asfora Silva, 987654321-98, consulta, 09-03-2020, 12:59, Karlos Gubianni" estão armazenadas no sistema.
+        Undefined. Implement with the following snippet:
+
+          Given('Os atendimentos {string} e {string} e {string} estão armazenadas no sistema.', function (string, string2, string3) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? When Eu digito a data inicial "30-12-2020"
+        Undefined. Implement with the following snippet:
+
+          When('Eu digito a data inicial {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? And Eu digito a data final "31-12-2020"
+        Undefined. Implement with the following snippet:
+
+          When('Eu digito a data final {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? And Eu requisito o sistema para "filtrar"
+        Undefined. Implement with the following snippet:
+
+          When('Eu requisito o sistema para {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? Then Eu vejo uma mensagem de erro com "Nenhum atendimento encontrado"
+        Undefined. Implement with the following snippet:
+
+          Then('Eu vejo uma mensagem de erro com {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+
+17) Scenario: Filtro de atendimentos por tipo. # features/FiltroAtendimento.feature:40
+    ? Given Os atendimentos "João Asfora Rodrigues, 123456789-01, consulta, 09-04-2020, 10:59, Igor Henrique" e "João Asfora Rodrigues, 123456789-01, cirurgia, 15-04-2020, 10:59, Galindo Vinícius" e "João Asfora Silva, 987654321-98, consulta, 09-03-2020, 12:59, Karlos Gubianni" estão armazenadas no sistema.
+        Undefined. Implement with the following snippet:
+
+          Given('Os atendimentos {string} e {string} e {string} estão armazenadas no sistema.', function (string, string2, string3) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? When o usuário solicita o filtro de atendimentos por tipo "cirurgia"
+        Undefined. Implement with the following snippet:
+
+          When('o usuário solicita o filtro de atendimentos por tipo {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? And Eu requisito o sistema para "filtrar"
+        Undefined. Implement with the following snippet:
+
+          When('Eu requisito o sistema para {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? Then o sistema retorna um atendimento incluindo informações com nome do paciente, CPF do paciente, tipo, data, hora, nome do dentista com os valores "João Asfora Rodrigues, 123456789-01, cirurgia, 15-04-2020, 10:59, Galindo Vinícius"
+        Undefined. Implement with the following snippet:
+
+          Then('o sistema retorna um atendimento incluindo informações com nome do paciente, CPF do paciente, tipo, data, hora, nome do dentista com os valores {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+
+18) Scenario: Filtro de atendimentos por um range de datas, porém não existe nenhum atendimento registrado nesse período. O sistema retorna um código de erro. # features/FiltroAtendimento.feature:46
+    ? Given Os atendimentos "João Asfora Rodrigues, 123456789-01, consulta, 09-04-2020, 10:59, Igor Henrique" e "João Asfora Rodrigues, 123456789-01, cirurgia, 15-04-2020, 10:59, Galindo Vinícius" e "João Asfora Silva, 987654321-98, consulta, 09-03-2020, 12:59, Karlos Gubianni" estão armazenadas no sistema.
+        Undefined. Implement with the following snippet:
+
+          Given('Os atendimentos {string} e {string} e {string} estão armazenadas no sistema.', function (string, string2, string3) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? When Eu digito a data inicial "30-12-2020"
+        Undefined. Implement with the following snippet:
+
+          When('Eu digito a data inicial {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? And Eu digito a data final "31-12-2020"
+        Undefined. Implement with the following snippet:
+
+          When('Eu digito a data final {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? And Eu requisito o sistema para "filtrar"
+        Undefined. Implement with the following snippet:
+
+          When('Eu requisito o sistema para {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? Then o sistema retorna o código de erro "404"
+        Undefined. Implement with the following snippet:
+
+          Then('o sistema retorna o código de erro {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+
+19) Scenario: Sunday isn't Friday # features/is_it_friday_yet.feature:4
+    ? Given today is Sunday
+        Undefined. Implement with the following snippet:
+
+          Given('today is Sunday', function () {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? When I ask whether it's Friday yet
+        Undefined. Implement with the following snippet:
+
+          When('I ask whether it\'s Friday yet', function () {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+    ? Then I should be told "Nope"
+        Undefined. Implement with the following snippet:
+
+          Then('I should be told {string}', function (string) {
+            // Write code here that turns the phrase above into concrete actions
+            return 'pending';
+          });
+
+
+19 scenarios (19 undefined)
+94 steps (94 undefined)
+0m00.027s (executing steps: 0m00.000s)

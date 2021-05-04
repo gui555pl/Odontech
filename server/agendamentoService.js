@@ -19,7 +19,7 @@ function listAgendamento (app) {
 }
 
 function checkIfAgendamentoIsAvaiable (app) {
-    app.get('checkIfAgendamentoIsAvaiable', (req, res) => {
+    app.get('/checkIfAgendamentoIsAvaiable', (req, res) => {
         let { dentist, date, time }= req.query
         let isAvb = checkIfAvailable(dentist, date, time)
         res.send(isAvb)
