@@ -20,6 +20,7 @@ function removeWhiteSpaces (text) {
 function addProntuario(app) {
     app.post('/addProntuario', function (req, res) {
         let pront = req.body
+        pront.id = examples.PRONTUARIO_LIST.length
         let prontuarioList = pushProntuario(pront)
         res.send(prontuarioList)
         // res.sendStatus(200)
