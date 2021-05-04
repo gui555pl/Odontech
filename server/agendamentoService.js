@@ -24,4 +24,4 @@ function initiAgendamento (app) {
     listAgendamento(app)
 }
 
-module.exports = initiAgendamento
+module.exports = { initiAgendamento }
