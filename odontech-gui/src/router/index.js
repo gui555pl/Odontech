@@ -11,17 +11,17 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/agendamento',
+    path: '/agendamentos',
     name: 'Agendamento',
     component: Agendamento
   },
   {
-    path: '/atendimento',
+    path: '/atendimentos',
     name: 'Atendimento',
     component: Atendimento
   },
   {
-    path: '/Prontuario',
+    path: '/prontuarios',
     name: 'Prontuário',
     component: Prontuario
   },

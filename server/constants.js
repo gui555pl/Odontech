@@ -113,11 +113,11 @@ var examples = {
                 hipertenso: true,
                 gravidez: false,
                 alergias: 'Amendoim'
-
             },
             atendimento: [
                 {
                     medico_responsavel: 'Igor Henrique',
+                    nome_paciente: 'João Asfora Rodrigues',
                     queixas: 'Dentes sensíveis',
                     procedimento_realizado: 'Correção de esmalte',
                     medicamento_prescrito: 'Dipirona',
@@ -126,7 +126,8 @@ var examples = {
                     prontID: "1"
                 },
                 {
-                    medico_responsavel: 'Galindo Vinícius',
+                    medico_responsavel: 'Igor Henrique',
+                    nome_paciente: 'João Asfora Rodrigues',
                     queixas: 'Dor profunda ao mastigar',
                     procedimento_realizado: 'Remoção dos dentes sisos',
                     medicamento_prescrito: 'Tramadol',
@@ -149,11 +150,11 @@ var examples = {
                 hipertenso: false,
                 gravidez: false,
                 alergias: 'Anafilaxia'
-
             },
             atendimento: [
                 {
                     medico_responsavel: 'Karlos Gubiani',
+                    nome_paciente: 'João Asfora Silva',
                     queixas: 'Dente quebrado',
                     procedimento_realizado: 'Reconstrução da coroa',
                     medicamento_prescrito: 'Tramadol',

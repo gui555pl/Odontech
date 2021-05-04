@@ -40,81 +40,30 @@
 
 <script>
 // @ is an alias to /src
-
+import Swal from 'sweetalert2'
 export default {
   name: 'Prontuario',
   methods: {
     async findProntuarios() {
-      await this.$store.dispatch('prontuario/list', this.search)
-      this.prontuarios = [this.$store.getters['prontuario/getProntuarios']]
+      try{
+        await this.$store.dispatch('prontuario/list', this.search)
+        this.prontuarios = this.$store.getters['prontuario/getProntuarios']
+      } catch (err) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Nenhum prontuário encontrado'
+        })
+        console.error(err)
+      }
     }
   },
   data() {
     return {
-      type: 'CPF',
-      search: {cpf: undefined, nome: undefined},
-      prontuarios: [
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        },
-        {
-          name: 'Oliveira',
-          cpf: '123.456.789-10'
-        }
-      ]
+      search: {
+        cpf: undefined, 
+        nome: undefined
+      },
+      prontuarios: []
     }
   }
 }
