@@ -27,6 +27,14 @@ function getAtendimentosList () {
     return atendimentos
 }
 
+function invertDate (daate) {
+    let day = daate.split("-", 3)[0]
+    let month = daate.split("-", 3)[1]
+    let year = daate.split("-", 3)[2]
+    let fullDate = `${year}-${month}-${day}`
+    return fullDate
+}
+
 function filterByDateRange (app) {
     app.get('/filterAtendimentoByRange', (req, res) => {
         let from = req.query.from
@@ -36,10 +44,17 @@ function filterByDateRange (app) {
         let filteredAtendimentos = atendimentos.filter((atendimento) => {
             let time = atendimento.data
             let daates = time.split(",", 2)
-            console.log(daates)
-            let day = daates[0]
+            let daate = daates[0]
             let hour = daates[1]
+            let fullDate = invertDate(daate)
+            let isBetween = moment(fullDate).isBetween(invertDate(from), invertDate(to));
+            console.log(fullDate)
+            return isBetween
         })
+        if(filteredAtendimentos.length)
+            res.send(filteredAtendimentos)
+        else
+        res.status(404).send('Nenhum atendimento encontrado')
         res.send('oi')
     })
 }
@@ -54,8 +69,10 @@ function filterByPatient (app) {
         let selectedAtendimentos = filteredPront.reduce((acc, prontuario) => {
             return acc.concat(prontuario.atendimento)
         },[])
-        
-        res.send(selectedAtendimentos)
+        if(selectedAtendimentos.length)
+            res.send(selectedAtendimentos)
+        else
+        res.status(404).send('Nenhum atendimento encontrado')
     })
 }
 
@@ -66,7 +83,10 @@ function filterByDoctor (app) {
         let filtered = atendimentos.filter((atendimento) => {
             return atendimento.medico_responsavel.includes(doctor)
         })
-        res.send(filtered)
+        if(filtered.length)
+            res.send(filtered)
+        else
+        res.status(404).send('Nenhum atendimento encontrado')
     })
 }
 
