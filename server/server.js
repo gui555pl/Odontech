@@ -1,5 +1,6 @@
 const { initProntuario } = require('./prontuarioService');
 const { initAtendimento } = require('./atendimentoService');
+const { initAgendamento } = require('./agendamentoService');
 
 const express = require('express');
 const app = express();
@@ -18,6 +19,7 @@ app.use(function(req, res, next) {
 (function main () {
     initProntuario (app)
     initAtendimento (app)
+    initAgendamento (app)
 })();
 
 
