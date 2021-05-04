@@ -1,7 +1,7 @@
 Feature: Busca por prontuário de um paciente
 
 	As um dentista utilziando o sistema
-	I want to acessar um prontuário de um paciente específico
+	I want to encontrar um prontuário de um paciente específico
 	So that eu possa ter acesso às suas informações
 
 ############################## GUI Scenarios  ##############################
