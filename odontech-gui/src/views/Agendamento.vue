@@ -69,116 +69,118 @@
 </template>
 
 <script>
-const eventsArr = [
-  {
-    "name": "Felipe Lima",
-    "cpf": "12019146589",
-    "dentist": 2,
-    "color": "deep-purple",
-    "start": new Date("Mon May 10 2021 09:00:00 GMT-0300"),
-    "end": new Date("Mon May 10 2021 09:30:00 GMT-0300"),
-    "timed": true
-  },
-  {
-    "name": "Carla Alves",
-    "cpf": "14725836910",
-    "dentist": 3,
-    "color": "cyan",
-    "start": new Date("Sat May 29 2021 14:00:00 GMT-0300"),
-    "end": new Date("Sat May 29 2021 14:30:00 GMT-0300"),
-    "timed": true
-  },
-  {
-    "name": "Igor Felipe",
-    "cpf": "96385274154",
-    "dentist": 1,
-    "color": "indigo",
-    "start": new Date("Tue Jun 15 2021 11:00:00 GMT-0300"),
-    "end": new Date("Tue Jun 15 2021 11:30:00 GMT-0300"),
-    "timed": true
-  },
-  {
-    "name": "Vinícius Silva",
-    "cpf": "78945612330",
-    "dentist": 5,
-    "color": "orange",
-    "start": new Date("Wed May 05 2021 13:00:00 GMT-0300"),
-    "end": new Date("Wed May 05 2021 13:30:00 GMT-0300"),
-    "timed": true
-  },
-  {
-    "name": "Gabriel Luz",
-    "cpf": "98765432155",
-    "dentist": 0,
-    "color": "blue",
-    "start": new Date("Thu May 20 2021 10:00:00 GMT-0300"),
-    "end": new Date("Thu May 20 2021 10:30:00 GMT-0300"),
-    "timed": true
-  },
-  {
-    "name": "Deryk Alves",
-    "cpf": "75315985245",
-    "dentist": 6,
-    "color": "grey darken-1",
-    "start": new Date("Mon May 24 2021 11:00:00 GMT-0300"),
-    "end": new Date("Mon May 24 2021 11:30:00 GMT-0300"),
-    "timed": true
-  },
-  {
-    "name": "Heron",
-    "cpf": "78945612355",
-    "dentist": 3,
-    "color": "cyan",
-    "start": new Date("Mon May 24 2021 15:00:00 GMT-0300"),
-    "end": new Date("Mon May 24 2021 15:30:00 GMT-0300"),
-    "timed": true
-  },
-  {
-    "name": "Lucas Roberto",
-    "cpf": "45786314426",
-    "dentist": 4,
-    "color": "green",
-    "start": new Date("Fri May 14 2021 10:00:00 GMT-0300"),
-    "end": new Date("Fri May 14 2021 10:30:00 GMT-0300"),
-    "timed": true
-  },
-  {
-    "name": "Rogéria Lopes",
-    "cpf": "78545622455",
-    "dentist": 4,
-    "color": "green",
-    "start": new Date("Thu Jun 03 2021 16:00:00 GMT-0300"),
-    "end": new Date("Thu Jun 03 2021 16:30:00 GMT-0300"),
-    "timed": true
-  },
-  {
-    "name": "Joana Silva",
-    "cpf": "45214596325",
-    "dentist": 2,
-    "color": "deep-purple",
-    "start": new Date("Fri Jun 25 2021 17:00:00 GMT-0300"),
-    "end": new Date("Fri Jun 25 2021 17:30:00 GMT-0300"),
-    "timed": true
-  },
-  {
-    "name": "João Pedro Silva",
-    "cpf": "78547854785",
-    "dentist": 3,
-    "color": "cyan",
-    "start": new Date("Sun May 02 2021 10:00:00 GMT-0300"),
-    "end": new Date("Sun May 02 2021 10:30:00 GMT-0300"),
-    "timed": true
-  }
-]
+// const eventsArr = [
+//   {
+//     "name": "Felipe Lima",
+//     "cpf": "12019146589",
+//     "dentist": 2,
+//     "color": "deep-purple",
+//     "start": new Date("Mon May 10 2021 09:00:00 GMT-0300"),
+//     "end": new Date("Mon May 10 2021 09:30:00 GMT-0300"),
+//     "timed": true
+//   },
+//   {
+//     "name": "Carla Alves",
+//     "cpf": "14725836910",
+//     "dentist": 3,
+//     "color": "cyan",
+//     "start": new Date("Sat May 29 2021 14:00:00 GMT-0300"),
+//     "end": new Date("Sat May 29 2021 14:30:00 GMT-0300"),
+//     "timed": true
+//   },
+//   {
+//     "name": "Igor Felipe",
+//     "cpf": "96385274154",
+//     "dentist": 1,
+//     "color": "indigo",
+//     "start": new Date("Tue Jun 15 2021 11:00:00 GMT-0300"),
+//     "end": new Date("Tue Jun 15 2021 11:30:00 GMT-0300"),
+//     "timed": true
+//   },
+//   {
+//     "name": "Vinícius Silva",
+//     "cpf": "78945612330",
+//     "dentist": 5,
+//     "color": "orange",
+//     "start": new Date("Wed May 05 2021 13:00:00 GMT-0300"),
+//     "end": new Date("Wed May 05 2021 13:30:00 GMT-0300"),
+//     "timed": true
+//   },
+//   {
+//     "name": "Gabriel Luz",
+//     "cpf": "98765432155",
+//     "dentist": 0,
+//     "color": "blue",
+//     "start": new Date("Thu May 20 2021 10:00:00 GMT-0300"),
+//     "end": new Date("Thu May 20 2021 10:30:00 GMT-0300"),
+//     "timed": true
+//   },
+//   {
+//     "name": "Deryk Alves",
+//     "cpf": "75315985245",
+//     "dentist": 6,
+//     "color": "grey darken-1",
+//     "start": new Date("Mon May 24 2021 11:00:00 GMT-0300"),
+//     "end": new Date("Mon May 24 2021 11:30:00 GMT-0300"),
+//     "timed": true
+//   },
+//   {
+//     "name": "Heron",
+//     "cpf": "78945612355",
+//     "dentist": 3,
+//     "color": "cyan",
+//     "start": new Date("Mon May 24 2021 15:00:00 GMT-0300"),
+//     "end": new Date("Mon May 24 2021 15:30:00 GMT-0300"),
+//     "timed": true
+//   },
+//   {
+//     "name": "Lucas Roberto",
+//     "cpf": "45786314426",
+//     "dentist": 4,
+//     "color": "green",
+//     "start": new Date("Fri May 14 2021 10:00:00 GMT-0300"),
+//     "end": new Date("Fri May 14 2021 10:30:00 GMT-0300"),
+//     "timed": true
+//   },
+//   {
+//     "name": "Rogéria Lopes",
+//     "cpf": "78545622455",
+//     "dentist": 4,
+//     "color": "green",
+//     "start": new Date("Thu Jun 03 2021 16:00:00 GMT-0300"),
+//     "end": new Date("Thu Jun 03 2021 16:30:00 GMT-0300"),
+//     "timed": true
+//   },
+//   {
+//     "name": "Joana Silva",
+//     "cpf": "45214596325",
+//     "dentist": 2,
+//     "color": "deep-purple",
+//     "start": new Date("Fri Jun 25 2021 17:00:00 GMT-0300"),
+//     "end": new Date("Fri Jun 25 2021 17:30:00 GMT-0300"),
+//     "timed": true
+//   },
+//   {
+//     "name": "João Pedro Silva",
+//     "cpf": "78547854785",
+//     "dentist": 3,
+//     "color": "cyan",
+//     "start": new Date("Sun May 02 2021 10:00:00 GMT-0300"),
+//     "end": new Date("Sun May 02 2021 10:30:00 GMT-0300"),
+//     "timed": true
+//   }
+// ]
 
 import Swal from 'sweetalert2'
+
+import axios from 'axios'
 
 export default {
   name: 'Agendamento',
   computed: {
     computedDateFormatted() {
       return `${this.formatDate(this.dialogData.date)}`
-    }
+    },
   },
   watch: {
     dialog (nV) {
@@ -209,7 +211,7 @@ export default {
       type: 'month',
       weekday: [0, 1, 2, 3, 4, 5, 6],
       value: '',
-      events: eventsArr,
+      events: [],
       dentists: [
         {
           text: 'Alberto',
@@ -256,11 +258,11 @@ export default {
     }
   },
   methods: {
-    addEvent () {
+    async addEvent () {
       let endDateTime = new Date(this.dialogData.date + ' ' + this.dialogData.time)
       endDateTime.setMinutes(endDateTime.getMinutes() + 60)
       if (this.dialogData.name !== '' && this.dialogData.cpf !== '' && this.dialogData.dentist !== '' && this.dialogData.time !== '') {
-        if (this.checkIfAvailable(this.dialogData.dentist, this.dialogData.date, this.dialogData.time)) {
+        if (await this.checkIfAvailable(this.dialogData.dentist, this.dialogData.date, this.dialogData.time)) {
           const event = {
             name: this.dialogData.name,
             cpf: this.dialogData.cpf,
@@ -270,7 +272,9 @@ export default {
             end: endDateTime,
             timed: true
           }
-          this.events.push(event)
+          // this.events.push(event)
+          await this.$store.dispatch['agendamento/addAgendamento', event]
+          this.events = this.$store.getters['agendamento/getAgendamentos']
           this.dialog = false
           Swal.fire({
             icon: 'success',
@@ -289,12 +293,10 @@ export default {
         })
       }
     },
-    checkIfAvailable(dentist, date, time) {
-      const dateToAdd = new Date(`${date} ${time}`)
-      const sameDateArr = this.events.filter((event) => {
-        return event.dentist === dentist && event.start.getTime() == dateToAdd.getTime()
-      })
-      return sameDateArr.length === 0
+    async checkIfAvailable(dentist, date, time) {
+      let result = false
+      result = await axios.get('http://localhost:3000/checkIfAgendamentoIsAvailable', {params: {dentist, date, time}})
+      return result.data
     },
     prev () {
       this.$refs.calendar.prev()
@@ -309,7 +311,14 @@ export default {
       return `${day}/${month}/${year}`
     }
   },
-  mounted() {
+  async created() {
+    try{
+      await this.$store.dispatch('agendamento/list', {})
+    } catch (err) {
+      console.error(err)
+    }
+  },
+  async mounted() {
     setTimeout(() => {
       this.updateKey++
     }, 1);
