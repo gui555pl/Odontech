@@ -18,9 +18,7 @@ function findProntuarioByCPF(app) {
         prontuarioList = examples.PRONTUARIO_LIST
         var found = prontuarioList.find((el) => {
             console.log(CPF)
-            if (el.paciente.cpf === CPF)
-                return true
-            return false
+            return el.paciente.cpf.includes(CPF)
         })
         if (found) {
             res.send(found)
@@ -36,7 +34,7 @@ function findProntuarioByName(app) {
         prontuarioList = examples.PRONTUARIO_LIST
         var found = prontuarioList.find((el) => {
             console.log(removeWhiteSpaces(removeAcento(el.paciente.nome)))
-            if (removeWhiteSpaces(removeAcento(el.paciente.nome)) === removeWhiteSpaces(removeAcento(name)))
+            if (removeWhiteSpaces(removeAcento(el.paciente.nome)).includes(removeWhiteSpaces(removeAcento(name))))
                 return true
             return false
         })
