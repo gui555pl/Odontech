@@ -25,11 +25,6 @@ Scenario: O dentista busca por um prontuário usando o CPF do paciente, porém n
 	And Eu requisito o sistema para "buscar"
 	Then O sistema mostra uma mensagem de erro com "Nenhum prontuário encontrado"
 
-Scenario: O dentista busca por um prontuário usando o CPF do paciente, porém sua conexão com a internet caiu. O sistema retorna uma mensagem de erro.
-	Given eu estou na página "Prontuários"
-	When Eu digito o CPF "999999999-99" no campo de busca por CPF
-	And Eu requisito o sistema para "buscar"
-	Then O sistema mostra uma mensagem de erro com "Houve um erro com sua requisição, verifique a sua conexão e tente novamente."
 
 ############################## Service Scenarios ##############################
 
