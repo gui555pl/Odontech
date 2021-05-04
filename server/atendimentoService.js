@@ -13,18 +13,35 @@ function addAtendimento (app) {
 
 function listAtendimentos (app) {
     app.get('/listAtendimentos', (req, res) => {
-        let prontuarios = examples.PRONTUARIO_LIST
-        let atendimentos = prontuarios.reduce((acc, prontuario) => {
-            return acc.concat(prontuario.atendimento)
-        },[])
-        console.log(atendimentos)
+        let atendimentos = getAtendimentosList
         res.send(atendimentos)
-        return atendimentos
     })
 }
 
-function filterByDateRange (app) {
+function getAtendimentosList () {
+    let prontuarios = examples.PRONTUARIO_LIST
+    let atendimentos = prontuarios.reduce((acc, prontuario) => {
+        return acc.concat(prontuario.atendimento)
+    },[])
+    
+    return atendimentos
+}
 
+function filterByDateRange (app) {
+    app.get('/filterAtendimentoByRange', (req, res) => {
+        let from = req.params.from
+        let to = req.params.to
+        let atendimentos = getAtendimentosList(app)
+        console.log(atendimentos)
+        let filteredAtendimentos = atendimentos.filter((atendimento) => {
+            let time = atendimento.data
+            let daates = time.split(",", 2)
+            console.log(daates)
+            let day = daates[0]
+            let hour = daates[1]
+        })
+        res.send('oi')
+    })
 }
 
 function filterByPatient (app) {
@@ -45,7 +62,7 @@ function filterByPatient (app) {
 function filterByDoctor (app) {
     app.get('/filterAtendimentoByDoctor', (req, res) => {
         let doctor = req.params.doctor
-        let atendimentos = listAtendimentos(app)
+        let atendimentos = getAtendimentosList(app)
         let filtered = atendimentos.filter((atendimento) => {
             return atendimento.includes(doctor)
         })

@@ -7,7 +7,7 @@ var examples = {
             paciente: {
                 nome: 'João Asfora Rodrigues',
                 cpf: '123456789-01',
-                endereco: 'R. Industrial José Paulo Alimonda - San MartinRecife - PE, 50760-710',
+                endereco: 'R. Industrial José Paulo Alimonda - San Martin, Recife - PE, 50760-710',
                 DOB: '01/10/1987',
                 sexo: 'M',
                 diabetico: true,
@@ -22,7 +22,7 @@ var examples = {
                     queixas: 'Dentes sensíveis',
                     procedimento_realizado: 'Correção de esmalte',
                     medicamento_prescrito: 'Dipirona',
-                    data: "09, 04, 2020, 10:59",
+                    data: "09-04-2020, 10:59",
                     tipo: "consulta",
                     prontID: "1"
                 },
@@ -31,7 +31,7 @@ var examples = {
                     queixas: 'Dor profunda ao mastigar',
                     procedimento_realizado: 'Remoção dos dentes sisos',
                     medicamento_prescrito: 'Tramadol',
-                    data: "15, 04, 2020, 10:59",
+                    data: "15-04-2020, 10:59",
                     tipo: "cirurgia",
                     prontID: "1"
 
@@ -43,7 +43,7 @@ var examples = {
             paciente: {
                 nome: 'João Asfora Silva',
                 cpf: '987654321-98',
-                endereco: 'Rua Conde de Irajá - TorreRecife - PE, 50710-310',
+                endereco: 'Rua Conde de Irajá - Torre, Recife - PE, 50710-310',
                 DOB: '10/01/1978',
                 sexo: 'M',
                 diabetico: false,
@@ -58,7 +58,7 @@ var examples = {
                     queixas: 'Dente quebrado',
                     procedimento_realizado: 'Reconstrução da coroa',
                     medicamento_prescrito: 'Tramadol',
-                    data: "09, 03, 2020, 10:59",
+                    data: "09-03-2020, 10:59",
                     tipo: "cirurgia",
                     prontID: "2"
                 }
